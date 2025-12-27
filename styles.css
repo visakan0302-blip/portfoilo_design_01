@@ -1,0 +1,208 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body Background – Light Cyan */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #111;
+    background-color: #e0f7fa;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Header */
+header {
+    background-color: rgba(0, 188, 212, 0.85);
+    color: #000;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    display: inline;
+    font-size: 2em;
+    color: #000;
+}
+
+nav ul {
+    list-style: none;
+    float: right;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #b2ebf2;
+}
+
+/* Sections – Single Cyan */
+.section {
+    padding: 60px 0;
+    background-color: #b2ebf2;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+    position: relative;
+    z-index: 2;
+    color: #111;
+}
+
+/* Section separator */
+.section-separator {
+    width: 100%;
+    height: 50px;
+    background: #e0f7fa;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+    margin-top: 40px;
+}
+
+/* Fade In */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000;
+}
+
+h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+p, li {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #111;
+}
+
+/* Projects */
+.project {
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 15px;
+    background-color: #e0f7fa;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+.project:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+/* Float Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Skills */
+ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    background-color: #00acc1;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 188, 212, 0.85);
+    color: #000;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Decorative Shapes – Cyan Only */
+.moving-circle,
+.moving-square {
+    position: absolute;
+    opacity: 0.4;
+}
+
+.moving-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #80deea;
+    animation: moveCircle 12s linear infinite;
+}
+
+.moving-square {
+    width: 40px;
+    height: 40px;
+    background-color: #4dd0e1;
+    border-radius: 8px;
+    animation: moveSquare 14s linear infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        float: none;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    ul li {
+        display: block;
+        width: 100%;
+    }
+}
+
